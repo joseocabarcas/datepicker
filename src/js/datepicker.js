@@ -47,6 +47,8 @@
 					<div class="next" id="nextYear">N</div>
 					<div class="previous" id="previousYear">P</div>
 					<div class="month" id="month"></div>
+					<div class="next" id="nextMonth">Nm</div>
+					<div class="previous" id="previousMonth">Pm</div>
 					<div class="days" id="days"></div>
 				</div>
 			`
@@ -61,6 +63,16 @@
 			document.getElementById('previousYear').addEventListener("click", (e) => {
 				console.log(e)
 				this.currentDate.subtract(1, 'years');
+				this.initDate(this.currentDate)
+			});
+			document.getElementById('nextMonth').addEventListener("click", (e) => {
+				console.log(e)
+				this.currentDate.add(1, 'months');
+				this.initDate(this.currentDate)
+			});
+			document.getElementById('previousMonth').addEventListener("click", (e) => {
+				console.log(e)
+				this.currentDate.subtract(1, 'months');
 				this.initDate(this.currentDate)
 			});
 			document.getElementById(this.element).addEventListener("click", (e) => {
