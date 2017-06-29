@@ -33,10 +33,11 @@
 
 				var days = this.generateCalendar(data);
 				var _template = this.constructHTMLCalendar(data, days);
-				console.log(moment.months());
-				console.log(days);
-				console.log(_template);
-				document.body.innerHTML += _template;
+				// console.log(moment.months());
+				// console.log(days);
+				// console.log(_template);
+				document.getElementById('days').innerHTML = _template;
+				// document.body.innerHTML += _template;
 			}
 		},
 		initializeTemplate: function() {
@@ -44,9 +45,9 @@
 				<div class="datepicker" id="datepicker" style="display: none;">
 					<div class="year" id="year"></div>
 					<div class="next" id="nextYear">N</div>
-					<div class="next" id="previousYear">P</div>
-					<div class="year" id="month"></div>
-					<pre id="days"></pre>
+					<div class="previous" id="previousYear">P</div>
+					<div class="month" id="month"></div>
+					<div class="days" id="days"></div>
 				</div>
 			`
 		},
